@@ -17,7 +17,7 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,md}\"",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "start": "npm run dev",
-    "test": "npm run type-check && npm run lint",
+    "test": "jest --watch",
     "type-check": "tsc"
   },
   "engines": {
@@ -36,6 +36,7 @@
     "gatsby-plugin-sharp": "^2.2.1",
     "gatsby-plugin-typescript": "^2.1.0",
     "gatsby-remark-copy-linked-files": "^2.1.0",
+    "gatsby-plugin-force-trailing-slashes": "^1.0.4",
     "gatsby-remark-images": "^3.1.0",
     "gatsby-remark-prismjs": "^3.3.0",
     "gatsby-remark-responsive-iframe": "^2.2.0",
@@ -44,6 +45,7 @@
     "gatsby-transformer-json": "^2.2.0",
     "gatsby-transformer-remark": "^2.5.0",
     "gatsby-transformer-sharp": "^2.2.0",
+    "gatsby-plugin-sass": "^2.3.12",
     "modern-normalize": "^0.5.0",
     "normalize.css": "^8.0.1",
     "polished": "^3.4.1",
@@ -68,6 +70,39 @@
     "eslint-plugin-prettier": "^3.1.1",
     "gh-pages": "^2.0.1",
     "prettier": "^1.18.2",
+    "jest": "^25.5.2",
     "rimraf": "^2.6.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.[jt]sx?$": "<rootDir>/jest-preprocess.js"
+    },
+    "moduleNameMapper": {
+      ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
+      ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/file-mock.ts"
+    },
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "\\.cache",
+      "<rootDir>.*/public"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(gatsby)/)"
+    ],
+    "globals": {
+      "__PATH_PREFIX__": ""
+    },
+    "testURL": "http://localhost",
+    "setupFiles": [
+      "<rootDir>/loadershim.ts"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/test.setup.ts"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn check-types && pretty-quick --staged && yarn lint && jest --ci"
+    }
   }
 }

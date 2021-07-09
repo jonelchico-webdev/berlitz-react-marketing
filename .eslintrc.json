@@ -1,0 +1,62 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "prettier",
+    "prettier/react",
+    "plugin:jest/recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": ["@typescript-eslint", "prettier", "jest"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "ignorePatterns": ["plugins/", "node_modules/"],
+  "rules": {
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "import/extensions": ["error", "never"],
+    "no-console": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.test.tsx", "**/test.setup.ts", "./jest-preprocess.js", "./gatsby-config.js", "./gatsby-node.js"]
+      }
+    ],
+    "jest/expect-expect": ["error", { "assertFunctionNames": ["expect", "getByText"] }],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "aspects": ["invalidHref", "preferButton"]
+      }
+    ],
+    "no-undef": 0,
+    "prettier/prettier": ["error"],
+    "react/prop-types": 0,
+    "react/require-default-props": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".ts", "tsx"] }]
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": ["error"]
+      }
+    },
+    {
+      "files": ["*.test.ts", "*.test.tsx"],
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}

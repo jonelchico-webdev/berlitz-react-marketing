@@ -13,13 +13,8 @@ module.exports = {
     }
   },
   plugins: [
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'content',
-        path: `${__dirname}/src/content`
-      }
-    },
+    'gatsby-plugin-sass',
+
     {
       resolve: 'gatsby-transformer-remark',
       options: {
@@ -55,6 +50,7 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    `gatsby-plugin-force-trailing-slashes`,
     'gatsby-plugin-react-helmet'
   ]
 }
