@@ -2,14 +2,14 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'gatsby-starter-typescript-plus',
-    description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
-    keywords: 'gatsbyjs, gatsby, javascript, sample, something',
+    title: 'Audio Technica Headphones',
+    description: 'Best Headphones of the Year',
+    keywords: 'audio technica, headphones, ath-msr7, 2017 best headphones, award winner headphone',
     siteUrl: 'https://gatsby-starter-typescript-plus.netlify.com',
     author: {
-      name: 'Resi Respati',
-      url: 'https://twitter.com/resir014',
-      email: 'resir014@gmail.com'
+      name: 'Jonel Chico',
+      url: 'https://www.linkedin.com/in/jonelchico/',
+      email: 'jonelrocchico@gmail.com'
     }
   },
   plugins: [
