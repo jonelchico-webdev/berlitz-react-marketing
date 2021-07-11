@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from '@emotion/styled'
 import swal from 'sweetalert'
 
@@ -61,6 +61,14 @@ const FooterLeftContainer: React.FC<FooterLeftContainerProps> = ({ className }) 
     }, 2000);
 
   }
+
+  useEffect(() => {
+    if (addedToCart) {
+      setTimeout(() => {
+        setAddedToCard(false);
+      }, 2000);
+    }
+  }, [addedToCart])
 
   return <StyledFooterLeftContainer className={className}>
     <Button onClick={() => handleAddToCart()}>
