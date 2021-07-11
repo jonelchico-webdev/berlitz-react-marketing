@@ -21,6 +21,9 @@ export const colors = {
   black: '#000',
   background: '#ededed',
   fontColor: '#4d4d4d',
+  fontColorLight: '#cacaca',
+  border: '#eeeeee',
+  blue: '#2386fd',
 }
 
 export const fonts = {
@@ -29,6 +32,17 @@ export const fonts = {
   serif: 'Georgia, "Times New Roman", Times, serif',
   monospace: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace'
 }
+
+export const size = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1024px',
+  laptopL: '1440px',
+  desktop: '2560px'
+}
+
 
 export const breakpoints = {
   xs: 0,
@@ -46,12 +60,12 @@ export const widths = {
 
 export const dimensions = {
   fontSize: {
-    regular: 16,
-    large: 18
+    regular: 14,
+    large: 16
   },
   headingSizes: {
     h1: 2.441,
-    h2: 1.953,
+    h2: 2.2,
     h3: 1.563,
     h4: 1.25
   },

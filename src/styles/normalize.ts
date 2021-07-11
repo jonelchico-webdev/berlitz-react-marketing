@@ -101,6 +101,7 @@ export default `
 
   h2 {
     font-size: ${dimensions.headingSizes.h2}rem;
+    font-weight: 700;
   }
 
   h3 {

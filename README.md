@@ -1,7 +1,6 @@
-# Monroe React Marketing
+# Berlitz React Marketing
 
 ### Start developing
-
 
 ```bash
 #Navigate into your new site’s directory and start it up.

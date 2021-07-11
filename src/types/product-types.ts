@@ -1,6 +1,7 @@
 export type ProductType = {
   brand: String;
   name: String;
+  award: String;
   description: String;
   details: ProductDetailType;
   price: Number;

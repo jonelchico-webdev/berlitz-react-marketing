@@ -4,6 +4,8 @@ import styled from '@emotion/styled'
 const StyledLayoutMain = styled.main`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   flex: 1;
 `
 
