@@ -66,7 +66,7 @@ export const dimensions = {
   headingSizes: {
     h1: 2.441,
     h2: 2.2,
-    h3: 1.563,
+    h3: 1.8,
     h4: 1.25
   },
   lineHeight: {

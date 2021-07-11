@@ -12,7 +12,7 @@ const StyledCardContainer = styled.div`
   box-shadow: .05em .05em 1em #e4e2e2;
   min-width: 80vw;
   min-height: 80vh;
-  max-height: 80vh;
+  /* max-height: vh; */
   display: flex;
   flex-direction: row;
 
@@ -22,6 +22,7 @@ const StyledCardContainer = styled.div`
   }
   @media (max-width: ${size.tablet}) {
     min-height: 95vh;
+    max-height: 80vh;
     max-width:  90vw;
   }
   @media (max-width: ${size.tablet}) {

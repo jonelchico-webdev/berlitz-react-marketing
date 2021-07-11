@@ -9,19 +9,14 @@ export type ProductType = {
   colors: ProductColorDetailType[];
 }
 
-type ProductDetailType = {
-  driverType: String;
-  driverSize: Number;
-  headphoneType: String;
-  impedance: Number;
-  sensitivity: Number;
-  frequencyResponse: String;
-  maximumInputPower: Number;
-  headphoneConnector: String;
-  weight: Number;
+export type ProductDetailType = {
+  type: String;
+  driver: Number;
+  frequency: String;
+  maximumInputPower: String;
+  sensitivity: String;
 }
 
 type ProductColorDetailType = {
   color: String;
-  image: String;
 }

@@ -5,7 +5,7 @@ import { BiArrowBack } from 'react-icons/bi'
 import { size, colors } from '../../styles/variables'
 
 const StyledHeaderLeftContainer = styled.div`
-  padding-top: 1em;
+  padding-top: 2em;
   padding-left: 4em;
   padding-right: 4em;
   display: flex;
@@ -26,7 +26,7 @@ const StyledHeaderLeftContainer = styled.div`
     margin-bottom: 2em;
     .sub-title {
       color: ${colors.fontColorLight};
-      font-size: 1rem;
+      font-size: .8rem;
     }
   }
 
@@ -77,7 +77,7 @@ const HeaderLeftContainer: React.FC<HeaderLeftContainerProps> = ({ className, aw
 
   return <StyledHeaderLeftContainer className={className}>
     <div className="back-button">
-      <BiArrowBack /> All products
+      <BiArrowBack color={colors.fontColorLight} /> All products
     </div>
 
     <div className="header-container">
