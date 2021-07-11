@@ -57,6 +57,7 @@ const Select = styled.select`
   border-radius: .5em;
   padding: 5px;
   font-size: 14px;
+  cursor: pointer;
 
   option {
     border: 1px solid #c7c7c7;
